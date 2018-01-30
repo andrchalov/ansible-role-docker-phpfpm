@@ -1,0 +1,5 @@
+---
+docker_phpfpm_image: php:5-fpm-alpine
+docker_phpfpm_name: php-fpm
+docker_phpfpm_published_ports:
+  - "{{ansible_docker0.ipv4.address}}:9000:9000"

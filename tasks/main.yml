@@ -1,0 +1,9 @@
+---
+- name: Run php-fpm docker container
+  docker_container:
+    name: "{{docker_phpfpm_name}}"
+    image: "{{docker_phpfpm_image}}"
+    volumes: "{{docker_phpfpm_mounts}}"
+    published_ports: "{{docker_phpfpm_published_ports}}"
+    restart_policy: always
+    state: started
